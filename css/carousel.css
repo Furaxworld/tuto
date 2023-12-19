@@ -62,6 +62,7 @@ body {
 
 .carousel-inner  {
   -webkit-transform-style: preserve-3d;
+  top: 100px;
 }
 
 /* MARKETING CONTENT
