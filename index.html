@@ -131,7 +131,7 @@
 
     <div class="col-sm-12">
 
-
+<!--Start Jeedom -->
       <div class="row featurette">
         <div class="col-sm-4">
           <img class="featurette-image img-responsive center-block" src="images/page-index/jeedom-logo.png" width=40% height=40% alt="Jeedom logo">
@@ -143,10 +143,12 @@
           <p class="lead"> 
 		  <a href="https://github.com/Netflix/genie">Modifier l'URL DNS jeedom </a> 
            </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
+              </div>
+                   </div>
+                        <hr class="featurette-divider">
+<!--End Jeedom-->
+	    
+<!--Start jmqtt-->
 
       <div class="row featurette">
         <div class="col-sm-4">
@@ -160,10 +162,12 @@
             on other Gradle plugins to make them easy to build, test and deploy. By standardizing plugin development, we've lowered the barrier to generating
             them, allowing us to keep our build modular and composable.</p>
           
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
+              </div>
+                   </div>
+                        <hr class="featurette-divider">
+<!--End jMQTT-->
+	    
+<!--Satrt shelly-->
 
       <div class="row featurette">
         <div class="col-sm-4">
@@ -179,140 +183,16 @@
             beyond single service calls, <a href="https://github.com/Netflix/hystrix">Hystrix</a> is provided to isolate latency and fault tolerance at runtime. The previous
             libraries and services can be used with any JVM based container.</p>
           
-        </div>
-      </div>
+              </div>
+                   </div>
+                        <hr class="featurette-divider">
 
-      <hr class="featurette-divider">
+<!--End shelly-->
 
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/content-engineering.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="content-encoding">Content Encoding</a></h2>
-          <h3>Automated Scalable Multimedia Ingest and Encoding</h3>
-          <p class="lead">One of the great challenges for Netflix is managing the large and numerous audio and video assets at scale.  This scale challenge
-            is bounded by Hollywood master files that can be multiple terabytes in size, and cellular audio and video encodes which must provide an excellent
-            customer experience at 200 Kilobits-per-second.  As part of the Netflix Digital Supply Chain, our encoding-related open-source efforts focus on tools
-            and technologies that allow us meet the challenges of content ingest, and encoding, at scale.</p>
-          <p class="lead"><a href="https://github.com/Netflix/photon">Photon</a> is a Java implementation of the Interoperable Master Format (IMF) standard.
-            IMF is a SMPTE standard whose core constraints are defined in the specification st2067-2:2013. <a href="https://github.com/Netflix/vmaf">VMAF</a> is
-            a perceptual quality metric that out-performs the many objective metrics that are currently used for video encoder quality tests.</p>
-        </div>
-      </div>
+	    <!--New here-->
 
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/data-persistence.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="data-persistence">Data Persistence</a></h2>
-          <h3>Storing and Serving data in the Cloud.</h3>
-          <p class="lead">Handling over a trillion data operations per day requires an interesting mix of “off the shelf OSS” and in house projects. No single data
-            technology can meet every use case or satisfy every latency requirement. Our needs range from non-durable in-memory stores like Memcached, Redis, and <a href="http://hollow.how">Hollow</a>,
-            to searchable datastores such as Elastic and durable must-never-go-down datastores like Cassandra and MySQL.</p>
-          <p class="lead">Our Cloud usage and the scale at which we consume these technologies, has required us to build tools and services that enhance the
-            datastores we use. We’ve created the sidecars <a href="https://github.com/Netflix/Raigad">Raigad</a> and <a href="https://github.com/Netflix/Priam">Priam</a> to help with the deployment, management and backup/recovery of our hundreds of Elastic and
-            Cassandra clusters. We’ve created <a href="https://github.com/Netflix/EVCache">EVCache</a> and <a href="https://github.com/Netflix/dynomite">Dynomite</a> to use
-            Memcached and Redis at scale. We’ve even developed the <a href="https://github.com/Netflix/dyno">Dyno</a> client library to better consume Dynomite
-            in the Cloud.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/insight-performance.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="insight-reliability-performance">Insight, Reliability and Performance</a></h2>
-          <h3>Providing Actionable Insight at Massive Scale</h3>
-          <p class="lead">Telemetry and metrics play a critical role in the operations of any company, and at more than a billion metrics per minute flowing into
-            <a href="https://github.com/Netflix/atlas">Atlas</a>, our time-series telemetry platform, they play a critical role at Netflix.  However, Operational
-            Insight is considered a higher-order family of products at Netflix, including the ability to understand the current components of our cloud ecosystem
-            via <a href="https://github.com/Netflix/edda">Edda</a>, and the easy integration of Java application code with Atlas via the
-            <a href="https://github.com/Netflix/spectator">Spectator</a> library.</p>
-          <p class="lead">Effective performance instrumentation allows engineers to drill quickly on a massive volume of metrics, making critical decisions quickly
-            and efficiently.  <a href="https://github.com/Netflix/vector">Vector</a> exposes high-resolution host-level metrics with minimal overhead.
-          <p class="lead">Being able to understand the current state of our complex microservice architecture at a glance is crucial when making remediation decisions.
-            <a href="https://github.com/Netflix/vizceral">Vizceral</a> helps provide this at-a-glance intuition without needing to first build up a mental model of the system.</p>
-
-             <p class="lead">Finally to validate reliability, we have <a href="https://github.com/Netflix/chaosmonkey">Chaos Monkey</a> which tests our instances
-            for random failures, along with the <a href="https://github.com/Netflix/SimianArmy">Simian Army</a>.</p>
-            </p>
-          </p>
-          </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/security.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="security">Security</a></h2>
-          <h3>Defending at Scale</h3>
-          <p class="lead">Security is an increasingly important area for organizations of all types and sizes, and Netflix is happy to contribute a variety of
-            security tools and solutions to the open source community. Our security-related open source efforts focus primarily on operational tools and systems
-            to make security teams more efficient and effective when securing large and dynamic environments.</p>
-          <p class="lead"><a href="https://github.com/Netflix/security_monkey">Security Monkey</a> helps monitor and secure large AWS-based environments, allowing
-            security teams to identify potential security weaknesses. <a href="https://github.com/Netflix/scumblr">Scumblr</a> is an intelligence gathering tool that
-            leverages Internet-wide targeted searches to surface specific security issues for investigation.
-	    <a href="https://github.com/Netflix/stethoscope">Stethoscope</a> is a web application that collects information from existing systems management tools
-	    (e.g., JAMF or LANDESK) on a given employee’s devices and gives them clear and specific recommendations for securing their systems.</p>
-          </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/user-interface.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="user-interface">User Interface</a></h2>
-          <h3>Libraries to help you build rich client applications</h3>
-          <p class="lead">Every month, Netflix members around the world discover and watch more than ten billion hours of movies and shows on their TV, mobile
-            and desktop devices. Using modern UI technologies like Node.js, React and RxJS, our engineers build rich client applications that run across thousands
-            of devices. We strive to create cinematic, immersive experiences that delight our members, exhibit exceptional performance and work flawlessly. We're
-            continuously improving the product through data-driven A/B testing that enables us to experiment with novel concepts and understand the value of every
-            feature we ship.</p>
-          <p class="lead">We created <a href="https://netflix.github.io/falcor">Falcor</a> for efficient data fetching. We help maintain
-            <a href="https://github.com/restify/node-restify">Restify</a> to enable us to scale Node.js applications with full observability. We're
-            helping to build the next version of <a href="https://github.com/ReactiveX/RxJS">RxJS</a> to improve its performance and debuggability.</p>
-          </p>
-        </div>
-      </div>
-	    
- <hr class="featurette-divider">
 
 	    
-	     <div class="row featurette">
-        <div class="col-sm-4">
-          <img class="featurette-image img-responsive center-block" src="images/page-index/user-interface.png" alt="Generic placeholder image 1">
-        </div>
-        <div class="col-sm-8">
-          <h2 class="featurette-heading"><a class="nostyle" name="user-interface">User Interface</a></h2>
-          <h3>Libraries to help you build rich client applications</h3>
-          <p class="lead">Every month, Netflix members around the world discover and watch more than ten billion hours of movies and shows on their TV, mobile
-            and desktop devices. Using modern UI technologies like Node.js, React and RxJS, our engineers build rich client applications that run across thousands
-            of devices. We strive to create cinematic, immersive experiences that delight our members, exhibit exceptional performance and work flawlessly. We're
-            continuously improving the product through data-driven A/B testing that enables us to experiment with novel concepts and understand the value of every
-            feature we ship.</p>
-          <p class="lead">We created <a href="https://netflix.github.io/falcor">Falcor</a> for efficient data fetching. We help maintain
-            <a href="https://github.com/restify/node-restify">Restify</a> to enable us to scale Node.js applications with full observability. We're
-            helping to build the next version of <a href="https://github.com/ReactiveX/RxJS">RxJS</a> to improve its performance and debuggability.</p>
-          </p>
-        </div>
-      </div>
-	    
- <hr class="featurette-divider">
 	    
     <!-- /END THE FEATURETTES -->
 
