@@ -116,7 +116,7 @@ font-weight: bold;
 }
 
 .marketing {
-background: url('images/content-bg.jpg') top center repeat-x;
+background: url('/"../../css/images/content-bg.jpg"') top center repeat-x;
 background-color: #000;
 padding: 0px 50px 50px 50px;
 color: #fff;
