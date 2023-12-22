@@ -1,5 +1,10 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
+ul{
+	
+color: #94ca02;
+font-size: 16px;
+}
 a {
   color: #44B8FF;
 }
@@ -44,7 +49,7 @@ color: #989da4
 }
 
 .powered a:hover {
-text decoration: underline;
+text-decoration: underline;
 }
 
 .powered a:visited {
@@ -264,7 +269,6 @@ padding-top: 40px;
     margin-bottom: 20px;
     font-weight: 200;
     line-height: 1.4;
-    margin-bottom: 10px;
   }
 
   .carousel-caption h2 {
@@ -321,4 +325,5 @@ padding-top: 40px;
   .sidebar {
     margin-top: 15px;
   }
+}
 }
