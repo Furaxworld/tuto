@@ -1,23 +1,22 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 .top-scroll {
-    bottom: 2%;
-    display: none;
+    bottom: 3%;
     height: 40px;
     opacity: 1;
     overflow: hidden;
     position: fixed;
-    right: 12px;
+    right: 30px;
     text-align: center;
     width: 40px;
-    padding: 0;
+    padding-right: 1px;
     z-index: 9999;
     border-radius: 30px;
-    border-width: 2px;
-    border-style: solid;
+    border-width: 3px;
+    border-style: dashed;
     animation: bounce 2s infinite;
-    border-color: rgb(28, 155, 181);
-    color: rgb(87, 211, 234);
+    border-color: rgb(0 200 255);
+    color: rgb(0 200 255);
 }
 .top-scroll i {
     font-size: 18px;
