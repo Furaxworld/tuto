@@ -1,35 +1,27 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 .top-scroll {
-  animation: bounce 2s infinite;
+    bottom: 2%;
+    display: none;
+    height: 40px;
+    opacity: 1;
+    overflow: hidden;
+    position: fixed;
+    right: 12px;
+    text-align: center;
+    width: 40px;
+    padding: 0;
+    z-index: 9999;
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    animation: bounce 2s infinite;
+    border-color: rgb(28, 155, 181);
+    color: rgb(87, 211, 234);
 }
-
-@keyframes bounce {
-    20%,53%,80%,from,to {
-        -webkit-animation-timing-function: cubic-bezier(0.215,.61,.355,1);
-        animation-timing-function: cubic-bezier(0.215,.61,.355,1);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0)
-    }
-
-    40%,43% {
-        -webkit-animation-timing-function: cubic-bezier(0.755,.050,.855,.060);
-        animation-timing-function: cubic-bezier(0.755,.050,.855,.060);
-        -webkit-transform: translate3d(0,-30px,0);
-        transform: translate3d(0,-30px,0)
-    }
-
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(0.755,.050,.855,.060);
-        animation-timing-function: cubic-bezier(0.755,.050,.855,.060);
-        -webkit-transform: translate3d(0,-15px,0);
-        transform: translate3d(0,-15px,0)
-    }
-
-    90% {
-        -webkit-transform: translate3d(0,-4px,0);
-        transform: translate3d(0,-4px,0)
-    }
+.top-scroll i {
+    font-size: 18px;
+    line-height: 34px;
 }
 a {
   color: #44B8FF;
