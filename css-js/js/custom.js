@@ -13,16 +13,11 @@ $(document).ready(function() {
       $('.top-scroll').fadeOut();
     }
   });
-  $("a.top-scroll").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 2000, function(){
-        window.location.hash = hash;
-      });
-    }
+$("a.top-scroll").on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 2000);
   });
 });
 }(jQuery));
