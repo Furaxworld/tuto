@@ -191,10 +191,10 @@ text-align: center;
 }
 
 .featurette h3 {
-font-weight:200;
-color: #94ca02;
-font-size: 30px;
-text-align: center;
+	font-weight: 200;
+	color: #94ca02;
+	font-size: 20px;
+	text-align: center;
 }
 
 .featurette p {
