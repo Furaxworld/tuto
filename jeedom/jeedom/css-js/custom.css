@@ -84,14 +84,14 @@ a.nostyle {
  }
 blockquote {
     padding: 10px 20px;
-    margin: 20px 0px 20px 100px;
-    font-size: 20px;
+    margin: 20px 0px 20px 20px;
+    font-size: 17px;
     border-left: 5px solid #94ca02;
 }
 ul {
     padding: 10px 20px;
-    margin: 20px 0px 20px 100px;
-    font-size: 18px;
+    margin: 20px 0px 20px 10px;
+    font-size: 17px;
 }
 .masthead {
 background-color: #000000;
