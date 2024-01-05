@@ -3,7 +3,7 @@
 /*Font*/
 @font-face {
         font-family: "Octas";
-        src:url("index/fonts/fonts/Octas.otf");
+        src:url(../fonts/Octas.otf);
 }
 .top-scroll {
     bottom: 3%;
