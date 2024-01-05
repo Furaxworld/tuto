@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Furaxworld Jeedom">
+    <meta name="title" content="Furaxworld Jeedom">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <title>Furaxworld</title>
+    <link href="css-js/bootstrap.min.css" rel="stylesheet">
+    <link href="css-js/custom.css" rel="stylesheet">
+    <script src="css-js/js/jquery.min.js"></script>
+    <script type="text/javascript" src="css-js/js/custom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+ </head>
+
+  <body>
+
+    <div class="masthead">
+      <div class="container">
+        <div class="logo col-xs-6">
+         <a href="/tuto"><img src="images/header/logo.png" alt="logo" /></a>
+          </div>
+    <div class="powered col-xs-6">
+      <a href="https://www.paypal.me/furaxworld" target="_blank" rel="noopener noreferrer"><img src="images/header/paypal.svg" alt="Paypal"/><p>Furaxworld ❤️</p></a>
+        </div>
+         </div>
+          </div>
+
+
+ <!--================================================== -->
+
+
+ <div class="container marketing">
+     <div class="row featurette">
+       <div class="col-sm-8 col-md-12">
+&nbsp;
+        <img src= "images/virtuel-logo.png" class="center-block" style= "max-width: 120px; height: auto" alt= "logo shelly" >
+&nbsp;
+        <h3>Afficher les dernières communications des modules dans un virtuel</h3>	
+		   
+<div class="row featurette col-sm-4 col-md-12 col-lg-offset-2 col-lg-8">			
+  <h4 class="text-center">Le but de ce virtuel sera d'afficher l'heure et la date que vos modules renvoient et d'avoir un visuel rapide grâce à une icône colorée en fonction de la valeur retournée</h4>
+		   </div>
+<div> <img src= "images/virtuel.png" class="center-block" style= "width: 100%; max-width: 800px; height: auto" alt= "1" >	</div>	
+<div class="col-md-12">					
+<ul>
+	<li><font color="#94ca02">Se connecter à l'interface web de Jeedom :</font> Ouvrez votre navigateur web et accédez à l'adresse IP de votre Jeedom</li>
+<li><font color="#94ca02">Installer le plugin Virtuel :</font> Disponible sur le <a href="https://market.jeedom.com/index.php?v=d&p=market_display&id=21" target="_blank">&#10132; Market Jeedom</a>
+	</li>	
+<li><font color="#94ca02">Accéder au plugin Virtuel :</font> Sur la barre du haut, cliquez sur l'onglet &nbsp;  <code>Plugins</code> &#10132; <code>Programmation</code> &#10132; <code>Virtuel</code>
+	</li>	
+	<li><font color="#94ca02">Créer un nouvel équipement virtuel :</font> Cliquez sur le bouton "Ajouter" pour créer un nouveau virtuel. Donnez-lui un nom et validez en cliquant sur OK. Dans la case "Objet parent" sélectionnez l'endroit où vous voulez le mettre. Dans "Options" cochez les cases "Activer" et "Visible". Dans la case "Auto-actualisation" mettre <code>*/15 * * * *</code> pour un rafraîchissement toutes les 15 minutes. Validez en cliquant sur le bouton "Sauvegarder"</li>	
+</ul>
+<img src= "images/1.png" class="center-block" style= "width: 100%; max-width: 600px; height: auto" alt= "1" >
+ <ul>
+<li><font color="#94ca02">Configurer l'équipement virtuel :</font> Après avoir créé l'équipement virtuel, vous pouvez lui attribuer des commandes virtuelles. Cliquez sur l'onglet "Commandes" dans la fenêtre de configuration de l'équipement virtuel.</li>
+	<li><font color="#94ca02">Ajouter des commandes virtuelles :</font> Cliquez sur le bouton "Ajouter une info virtuelle". Par équipement nous aurons besoin de 2 commandes "info". Une <code>info/numérique</code> et une <code>info/autre</code> Pensez à décocher "historiser". </li>
+	 	<li><font color="#94ca02">Nommer les commandes virtuelles :</font> Dans l'exemple ci-dessous j'ai nommé la commande <code>info/numérique</code> "Module 1 icône" et la commande <code>info/autre</code> "Module 1 communication" </li>
+ </ul>
+<img src= "images/2.png" class="center-block" style= "width: 100%; max-width: 1000px; height: auto" alt= "2" >
+	 <ul>
+<li><font color="#94ca02">Valeur de la commande :</font> <code>info/numérique</code>
+	</li>
+	</ul>
+<pre2 class="col-lg-offset-2 col-lg-8">Code:</pre2>	    
+ <pre class="col-lg-offset-2 col-lg-8">
+  time_diff(#[Maison][DEMO][Module 1 communication]#,now,m)
+	</pre>
+		  </div>	 
+<div class="row featurette">	
+<div class="col-sm-8 col-md-12">
+	<ul>
+		<p><font color="#94ca02">Quelques précisions :</font></p>
+        <p> <code>[Maison]</code> correspond à l'objet </p>
+		<p> <code>[DEMO]</code> correspond au nom de l'équipement</p>
+		<p> <code>[Module 1 communication]</code> correspond au nom de la commande <code>info/autre</code></p>
+	</ul>
+ 	 <ul>
+<li><font color="#94ca02">Valeur de la commande :</font> <code>info/autre</code>
+	</li>
+	</ul>
+<pre2 class="col-lg-offset-2 col-lg-8">Code:</pre2>	    
+ <pre class="col-lg-offset-2 col-lg-8">
+lastCommunication(#[Température][Thermometre chambre]#)
+	</pre>
+	  </div>
+	   </div>	
+<div class="row featurette">	
+<div class="col-sm-8 col-md-12">
+    <ul>
+		<p><font color="#94ca02">Quelques précisions sur la fonction de calcul <code>lastCommunication</code></font></p>
+		<p>Seul l'objet et l'équipement sont nécessaires. <font color="#FF0F13">Ne pas mettre de commande!</font></p>
+        <p> <code>[Température]</code> correspond à l'objet </p>
+		<p> <code>[Thermometre chambre]</code> correspond au nom de l'équipement</p>
+		<li>Sauvegardez</li>
+	</ul>
+<img src= "images/3.png" class="center-block" style= "width: 100%; max-width: 250px; height: auto" alt= "3" >	
+        <h3>Création du widget pour l'affichage des bulles colorées</h3>
+<ul>
+	<li><font color="#94ca02">Partie code :</font></li>
+	<p>Copiez le code ci-dessous ensuite ouvrez le bloc note et collez le code</p>
+	<p>Enregistrez le fichier sur votre PC en le renommant <code>Modules.json</code></p>
+</ul>		   
+		   <pre2 class="col-lg-offset-2 col-lg-8">Code:</pre2>	    
+ <pre class="col-lg-offset-2 col-lg-8">
+{"id":"","name":"icone communication modules","type":"info","subtype":"numeric","template":"tmplmultistate","display":{"icon":"&lt;i class=\"icon kiko-record icon_red\"&gt;&lt;/i&gt;"},"replace":{"#_time_widget_#":"0","#_desktop_width_#":"200","#_mobile_width_#":"200"},"test":[{"operation":"#value# &lt; 120","state_light":"&lt;i class='icon kiko-record icon_green'&gt;&lt;/i&gt;","state_dark":"&lt;i class='icon kiko-record icon_green'&gt;&lt;/i&gt;"},{"operation":"#value# &gt;=120","state_light":"&lt;i class='icon kiko-record icon_orange'&gt;&lt;/i&gt;","state_dark":"&lt;i class='icon kiko-record icon_orange'&gt;&lt;/i&gt;"},{"operation":"#value# &gt;=180","state_light":"&lt;i class='icon kiko-record icon_red'&gt;&lt;/i&gt;","state_dark":"&lt;i class='icon kiko-record icon_red'&gt;&lt;/i&gt;"}],"jeedomCoreVersion":"4.3.21"}
+	</pre>
+		  </div>
+	   </div>
+<div class="row featurette">	
+<div class="col-sm-8 col-md-12">	   
+<ul>
+	<li><font color="#94ca02">Accéder aux widgets :</font> Sur la barre du haut, cliquez sur l'onglet &nbsp;  <code>Outils</code> &#10132; <code>Widgets</code></li>
+	<li><font color="#94ca02">Importer un Widget:</font> Cliquez sur l'onglet "Importer" et sélectionnez le fichier créé précédemment. Une fenêtre avec votre nouveau widget va s'ouvrir. Cliquez sur "sauvegarder"</li>
+	<li><font color="#94ca02">Application du widget à la commande :</font> <code>info/numérique</code></li>
+<p>Cliquez sur <i class="fa fa-cogs" style="font-size:20px;color:deepskyblue"></i> de la commande </p>
+	
+</ul>		   
+<img src= "images/4.png" class="center-block" style= "width: 100%; max-width: 800px; height: auto" alt= "4" >
+	<ul>
+		<p>Cliquez sur l'onglet affichage &#10132; sélectionnez le widget créé</p>
+		<p>Décochez "Afficher le nom" &#10132; sauvegardez</p>
+		
+	</ul>
+	<img src= "images/5.png" class="center-block" style= "width: 100%; max-width: 400px; height: auto" alt= "5" >
+
+	<ul>
+	<li>Pour l'affichage en mode tableau, ce sera à suivre...</li>
+    </ul>
+	 </div>
+	  </div>			
+		<hr>
+
+<!--=================Top-scroll====================== -->
+	 
+<a href="#" class="top-scroll" style="display: inline;"><i class="glyphicon glyphicon-arrow-up"></i></a>
+	 
+<!--=================Top-scroll====================== -->
+
+
+        </div>
+         </div>
+	      </div>
+           </body>
+</html>
