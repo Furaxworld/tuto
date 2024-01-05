@@ -1,6 +1,10 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-
+/*Font*/
+@font-face {
+        font-family: "Octas";
+        src:url("index/fonts/fonts/Octas.otf");
+}
 .top-scroll {
     bottom: 3%;
     height: 40px;
@@ -55,14 +59,19 @@ ul{
 font-size: 16px;
 }
 a {
-  color: #44B8FF;
+    color: #44B8FF;
+    font-family: Octas,Helvetica,Arial,sans-serif;
+    font-size: 20px;
 }
 
 a.nostyle {
- text-decoration: none;
- color: inherit;
- cursor: auto;
- }
+    text-decoration: none;
+    color: inherit;
+    cursor: auto;
+    font-family: Octas,Helvetica,Arial,sans-serif;
+    font-size: 30px;
+}
+
 
 .masthead {
 background-color: #000000;
@@ -88,9 +97,11 @@ top: 38px;
 }
 
 .powered p {
-float: right;
-color: #989da4;
-margin: 0;
+    float: right;
+    color: #989da4;
+    margin: 0;
+    font-family: Octas,Helvetica,Arial,sans-serif;
+    font-size: 18px;
 }
 
 .powered a {
@@ -126,16 +137,18 @@ font-size: 14px;
 }
 
 .carousel-caption h2 {
-font-weight:200;
-font-size: 22px;
-margin: 0;
+    font-weight: 200;
+    font-size: 30px;
+    margin: 0;
+    font-family: Octas,Helvetica,Arial,sans-serif;
 }
 
 .carousel-caption h3 {
-font-weight:200;
-color: #94ca02;
-font-size: 20px;
-margin: 0;
+    font-weight: 200;
+    color: #94ca02;
+    font-size: 24px;
+    margin: 0;
+    font-family: Octas,Helvetica,Arial,sans-serif;
 }
 
 .carousel-caption hr {
@@ -186,11 +199,12 @@ margin: 0 0 5px 0;
 }
 
 .featurette h3 {
-font-weight:200;
-  color: #94ca02;
-  font-size: 20px;
-  margin: 0 0 20px 0;
-  margin-top: 15px;
+    font-weight: 200;
+    color: #94ca02;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    margin-top: 15px;
+    font-family: Octas,Helvetica,Arial,sans-serif;
 }
 
 .featurette p {

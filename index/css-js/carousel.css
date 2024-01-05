@@ -1,7 +1,11 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
+/*Font*/
+@font-face {
+        font-family: "Octas";
+        src:url("../fonts/Octas.otf");
+}
 body {
   color: #5a5a5a;
 }
@@ -131,12 +135,14 @@ body {
   }
 
   /* Bump up size of carousel content */
-  .carousel-caption p {
+
+.carousel-caption p {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 200;
     line-height: 1.4;
-  }
+    font-family: Octas,Helvetica,Arial,sans-serif;
+}
 
   .featurette-heading {
     font-size: 50px;
