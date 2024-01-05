@@ -1,5 +1,13 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
+/*Font*/
+@font-face {
+        font-family: "Octas";
+        src:url(../fonts/Octas.otf);
+}
+
+/*Start Top Scroll*/
+
 .top-scroll {
     bottom: 3%;
     height: 40px;
@@ -49,6 +57,39 @@
         transform: translate3d(0,-4px,0)
     }
 }
+/* End Top Scroll*/
+
+pre {
+    white-space: break-spaces;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #353535;
+    border: 1.5px solid #989da4;
+    border-radius: 0px;
+    font-size: 13px;
+    color: #00c8ff;
+    margin: 0 0 30px 0;
+}
+pre2 {
+    white-space: initial;
+    font-family: Octas, Helvetica, Arial, serif;
+    background-color: #121212;
+    border-top: 1.5px solid #989da4;
+    border-radius: 0px;
+    font-size: 16px;
+    color: #00c8ff;
+    border-left: 1.5px solid #989da4;
+    border-right: 1.5px solid #989da4;
+    text-align: center;
+}
+code {
+    padding: 1px 4px 1px 4px;
+    font-size: 75%;
+    color: #00c8ff;
+    background-color: #353535;
+    border-radius: 0px;
+    border: 1.5px solid #989da4;
+}
+
 a {
   color: #44B8FF;
 }
@@ -67,10 +108,10 @@ blockquote {
 ul {
     padding: 10px 20px;
     margin: 20px 0px 20px 10px;
-    font-size: 17px;
+    font-size: 18px;
 }
 .masthead {
-background-color: #000000;
+    background-color: #000;
     border-bottom: 1px solid #989da4;
     line-height: 99px;
     position: fixed;
@@ -94,9 +135,11 @@ top: 38px;
 }
 
 .powered p {
-float: right;
-color: #989da4;
-margin: 0;
+    float: right;
+    color: #989da4;
+    margin: 0;
+    font-family: Octas, Helvetica, Arial, serif;
+    font-size: 18px;
 }
 
 .powered a {
@@ -181,6 +224,7 @@ font-weight: bold;
     color: #fff;
     margin-top: 120px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    font-family: Octas, Helvetica, Arial, serif;
 }
 
 .featurette h2 {
@@ -191,18 +235,20 @@ text-align: center;
 }
 
 .featurette h3 {
-	font-weight: 200;
-	color: #94ca02;
-	font-size: 20px;
-	text-align: center;
+    font-weight: 200;
+    color: #94ca02;
+    font-size: 28px;
+    text-align: center;
 }
 
 .featurette p {
-font-weight: 200;
-font-size: 20px;
+    font-weight: 200;
+    font-size: 18px;
 }
 
-
+.h4, h4 {
+    font-size: 22px;
+}
 
 .powered-container {
 background-color: #fff;
