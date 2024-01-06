@@ -14,11 +14,11 @@
     right: 30px;
     text-align: center;
     width: 40px;
-    padding-right: 1px;
+    padding-right: 0px;
     z-index: 9999;
     border-radius: 30px;
-    border-width: 3px;
-    border-style: dashed;
+    border-width: 2px;
+    border-style: solid;
     animation: bounce 2s infinite;
     border-color: rgb(0 200 255);
     color: rgb(0 200 255);
